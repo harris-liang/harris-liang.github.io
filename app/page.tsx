@@ -48,7 +48,6 @@ export default function Home() {
       <main id="main" className="page-shell">
         <section id="about" className="intro" aria-labelledby="name">
           <div className="identity">
-            <p className="eyebrow"><span className="identity-dot" /> University of California, Davis</p>
             <div className="identity-heading">
               <div className="portrait">
                 <img src="/haodong-liang-portrait.png" alt="Haodong Liang at the beach" width={1448} height={1086} decoding="async" fetchPriority="high" />
@@ -56,6 +55,7 @@ export default function Home() {
               <div className="identity-text">
                 <h1 id="name">Haodong<br />Liang<span className="name-period">.</span></h1>
                 <p className="role">Ph.D. Candidate<br />Electrical &amp; Computer Engineering</p>
+                <p className="location">3174 Kemper Hall<br />Davis, California</p>
               </div>
             </div>
             <div className="contact-links">
@@ -70,7 +70,6 @@ export default function Home() {
             <p className="bio-lead">Welcome to my homepage! I am a Ph.D. candidate at UC Davis, advised by Professors <a className="person-name" href="https://faculty.engineering.ucdavis.edu/lai/" target="_blank" rel="noopener noreferrer">Lifeng Lai</a> and <a className="person-name" href="https://sites.google.com/view/kriznakumar/home" target="_blank" rel="noopener noreferrer">Krishnakumar Balasubramanian</a>.</p>
             <p>I study the theoretical and mechanistic foundations of in-context learning. My research combines theoretical analysis with empirical investigation to understand how Transformers learn and execute algorithms in context.</p>
             <p>I am also interested in reinforcement learning, continual learning, and differential privacy.</p>
-            <p className="location">3174 Kemper Hall · Davis, California</p>
           </div>
         </section>
         <aside className="opportunity" aria-label="Work interests">
