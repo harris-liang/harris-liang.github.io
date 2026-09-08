@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240" role="img" aria-labelledby="title desc">
+  <title id="title">In-context learning with fixed model parameters</title>
+  <desc id="desc">The context contains apple → fruit and bird → animal, followed by the query carrot → ?. A Transformer uses the context to predict vegetable without parameter updates. This is an illustrative classification task.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="#5476aa" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <g fill="#182633" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="118" y="23" font-size="17" font-weight="500">Context</text>
+    <text x="292" y="23" font-size="17" font-weight="500" fill="#1646a1">Query</text>
+    <rect x="16" y="34" width="204" height="64" rx="8" fill="#f6f8fb" stroke="#d8e1ed" stroke-width="1.1"/>
+    <path d="M31 66H205" stroke="#e1e7f0" stroke-width="1"/>
+    <rect x="236" y="34" width="112" height="64" rx="8" fill="#edf3fc" stroke="#acc3e2" stroke-width="1.2"/>
+    <g font-family="Georgia, 'Times New Roman', serif" font-size="18">
+      <text x="132" y="57">apple → fruit</text>
+      <text x="132" y="87">bird → animal</text>
+      <text x="292" y="87" fill="#1646a1">carrot → ?</text>
+    </g>
+    <path d="M118 102V114H292V102" fill="none" stroke="#9aabc2" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="134" cy="114" r="2" fill="#5476aa"/>
+    <path d="M134 116V130" fill="none" stroke="#5476aa" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <rect x="48" y="136" width="172" height="52" rx="8" fill="#f3f7fd" stroke="#9fb7d8" stroke-width="1.3"/>
+    <text x="134" y="158" font-size="18">Transformer</text>
+    <text x="134" y="179" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="21" fill="#1646a1">f<tspan baseline-shift="sub" font-size="14">θ</tspan></text>
+    <path d="M228 164H248" fill="none" stroke="#5476aa" stroke-width="1.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <text x="303" y="139" font-size="15" fill="#596676">Prediction</text>
+    <rect x="256" y="148" width="94" height="31" rx="6" fill="#e7f0ff" stroke="#acc3e2" stroke-width="1.1"/>
+    <text x="303" y="169" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#1646a1">vegetable</text>
+  </g>
+</svg>

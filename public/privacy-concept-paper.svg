@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240" role="img" aria-labelledby="title desc">
+  <title id="title">Differential privacy and neighboring datasets</title>
+  <desc id="desc">Datasets D and D prime are identical except for one highlighted row, labeled a in D and b in D prime. Each is processed separately by the same randomized algorithm M. Solid and dashed curves illustrate nearby output distributions; the formal privacy guarantee bounds their distinguishability, not just their visual overlap.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="#5476aa" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <g fill="#182633" font-family="Arial, Helvetica, sans-serif">
+    <g id="dataset-panels" fill="#f6f8fb" stroke="#d8e1ed" stroke-width="1.1">
+      <rect x="37" y="31" width="65" height="67" rx="9"/>
+      <rect x="37" y="115" width="65" height="67" rx="9"/>
+    </g>
+    <g id="unchanged-records" fill="#d8e1ed">
+      <rect x="48" y="39" width="43" height="7" rx="3.5"/>
+      <rect x="48" y="52" width="43" height="7" rx="3.5"/>
+      <rect x="48" y="83" width="43" height="7" rx="3.5"/>
+      <rect x="48" y="123" width="43" height="7" rx="3.5"/>
+      <rect x="48" y="136" width="43" height="7" rx="3.5"/>
+      <rect x="48" y="167" width="43" height="7" rx="3.5"/>
+    </g>
+    <rect x="45" y="64" width="49" height="14" rx="5" fill="#4b76b5"/>
+    <rect x="45" y="148" width="49" height="14" rx="5" fill="#e7f0ff" stroke="#6e8ebc" stroke-width="1.1" stroke-dasharray="3 2"/>
+    <g font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" text-anchor="middle">
+      <text x="69.5" y="75" fill="#fff">a</text>
+      <text x="69.5" y="159" fill="#1646a1">b</text>
+    </g>
+    <g id="privacy-mechanisms" fill="#f3f7fd" stroke="#9fb7d8" stroke-width="1.3">
+      <rect x="124" y="46" width="34" height="36" rx="10"/>
+      <rect x="124" y="130" width="34" height="36" rx="10"/>
+    </g>
+    <g font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="23" text-anchor="middle">
+      <text x="17" y="70">D</text><text x="17" y="154">D′</text>
+      <text x="141" y="71" fill="#1646a1">M</text><text x="141" y="155" fill="#1646a1">M</text>
+    </g>
+    <g fill="none" stroke="#5476aa" stroke-width="1.3" stroke-linecap="round" marker-end="url(#arrow)">
+      <path d="M108 64H118"/><path d="M108 148H118"/>
+      <path d="M164 64C179 64 176 111 186 111"/>
+      <path d="M164 148C179 148 176 169 186 169"/>
+    </g>
+    <text x="270" y="24" text-anchor="middle" font-size="16" font-weight="500">Output distributions</text>
+    <g font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="17">
+      <path d="M197 47H212" stroke="#1646a1" stroke-width="1.8"/>
+      <text x="218" y="52" fill="#1646a1">M(D)</text>
+      <path d="M277 47H292" stroke="#5d7da8" stroke-width="1.8" stroke-dasharray="4 3"/>
+      <text x="298" y="52" fill="#5d7da8">M(D′)</text>
+    </g>
+    <rect x="190" y="78" width="162" height="124" rx="10" fill="#f8faff" stroke="#e3eaf4" stroke-width="1"/>
+    <g id="distribution-fills" stroke="none">
+      <path d="M194 194C214 194 225 183 235 153C245 122 250 100 262 100C274 100 279 122 289 153C299 183 310 194 330 194Z" fill="#b9d1f4" fill-opacity="0.45"/>
+      <path d="M210 194C230 194 241 183 251 153C261 122 266 100 278 100C290 100 295 122 305 153C315 183 326 194 346 194Z" fill="#d0dbed" fill-opacity="0.4"/>
+    </g>
+    <path d="M194 194H348" fill="none" stroke="#aabbd2" stroke-width="1" stroke-linecap="round"/>
+    <path id="distribution-d" d="M194 194C214 194 225 183 235 153C245 122 250 100 262 100C274 100 279 122 289 153C299 183 310 194 330 194" fill="none" stroke="#1646a1" stroke-width="2" stroke-linecap="round"/>
+    <path id="distribution-d-prime" d="M210 194C230 194 241 183 251 153C261 122 266 100 278 100C290 100 295 122 305 153C315 183 326 194 346 194" fill="none" stroke="#5d7da8" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>
+    <text x="77" y="211" text-anchor="middle" font-size="16" fill="#596676">One record</text>
+    <text x="77" y="231" text-anchor="middle" font-size="16" fill="#596676">changes</text>
+    <text x="271" y="217" text-anchor="middle" font-size="16" fill="#596676">Output</text>
+  </g>
+</svg>
