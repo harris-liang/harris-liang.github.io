@@ -1,0 +1,20 @@
+Twemoji illustrations
+
+Graphics by Twitter, Inc. and other contributors.
+Project: https://github.com/jdecked/twemoji
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+A copy of the graphics license is included as LICENSE-GRAPHICS.txt.
+
+Original files, downloaded from the project's main branch:
+
+icl-apple.png — Red Apple, U+1F34E
+https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f34e.png
+
+icl-bird.png — Bird, U+1F426
+https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f426.png
+
+icl-carrot.png — Carrot, U+1F955
+https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f955.png
+
+The original 72 × 72 PNG images are unchanged. The webpage scales and positions them next to the corresponding text in its in-context learning diagram.
