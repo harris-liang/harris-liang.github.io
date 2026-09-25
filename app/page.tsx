@@ -1,5 +1,5 @@
 const publications = [
-  { year: '2026', venue: 'arXiv preprint',
+  { year: '2026', venue: 'NeurIPS 2026',
     title: 'Transformers Provably Implement In-Context Reinforcement Learning with Policy Improvement',
     authors: ['Haodong Liang', 'Lifeng Lai'],
     url: 'https://arxiv.org/abs/2605.05755' },
