@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-labelledby="title desc">
+  <title id="title">Correct demonstrations can still induce forgetting</title>
+  <desc id="desc">A conceptual comparison of supervised and reinforcement fine-tuning. SFT fits the teacher distribution over correct demonstrations, including its style preferences. RFT generates its own samples, evaluates semantic correctness, and updates using reward feedback. The lower plot is a qualitative schematic of the paper's two-task population dynamics from a perfectly fitted, style-symmetric checkpoint: SFT old-task error rises and later declines, while RFT retains zero error throughout training. The horizontal axis denotes fine-tuning steps at a fixed step size. These curves are schematic, not measured data; the zero-error RFT behavior relies on the studied population-update conditions.</desc>
+  <defs>
+    <marker id="sft-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1L7 4L1 7" fill="none" stroke="#76539b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="rft-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1L7 4L1 7" fill="none" stroke="#4b76b5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="axis-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1L7 4L1 7" fill="none" stroke="#9aa5b1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#182633" text-anchor="middle">
+    <text x="180" y="35" font-size="30" font-weight="600" fill="#76539b">SFT</text>
+    <text x="540" y="35" font-size="30" font-weight="600" fill="#1646a1">RFT</text>
+
+    <g aria-label="Correct teacher demonstrations">
+      <rect x="48" y="65" width="62" height="66" rx="6" fill="#f3eef8" stroke="#c3aed7" stroke-width="1.5"/>
+      <rect x="39" y="73" width="62" height="66" rx="6" fill="#fff" stroke="#a88dbe" stroke-width="1.8"/>
+      <path d="M52 88H84M52 99H84M52 110H72" fill="none" stroke="#76539b" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="94" cy="130" r="13" fill="#edf3fc" stroke="#9fb7d8" stroke-width="1.4"/>
+      <path d="M88 130L92 134L101 125" fill="none" stroke="#4b76b5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="76" y="164" font-size="21" fill="#596676">Correct demos</text>
+    </g>
+    <path d="M128 105H209" fill="none" stroke="#76539b" stroke-width="2.4" marker-end="url(#sft-arrow)"/>
+    <rect x="225" y="78" width="96" height="54" rx="10" fill="#edf3fc" stroke="#9fb7d8" stroke-width="1.8"/>
+    <text x="273" y="112" font-size="24" fill="#1646a1">Model</text>
+    <text x="180" y="206" font-size="24" fill="#76539b">Fit teacher distribution</text>
+
+    <rect x="388" y="78" width="92" height="54" rx="10" fill="#edf3fc" stroke="#9fb7d8" stroke-width="1.8"/>
+    <text x="434" y="112" font-size="24" fill="#1646a1">Model</text>
+    <path d="M488 105H512" fill="none" stroke="#4b76b5" stroke-width="2.4" marker-end="url(#rft-arrow)"/>
+    <g aria-label="Model-generated samples">
+      <path d="M535 76H584Q590 76 590 82V112Q590 118 584 118H572L562 127V118H535Q529 118 529 112V82Q529 76 535 76Z" fill="#f3eef8" stroke="#c3aed7" stroke-width="1.5"/>
+      <path d="M527 87H573Q579 87 579 93V123Q579 129 573 129H545L534 138V129H527Q521 129 521 123V93Q521 87 527 87Z" fill="#fff" stroke="#a8b8ca" stroke-width="1.8"/>
+      <path d="M532 101H565M532 113H553" fill="none" stroke="#4b76b5" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="552" y="164" font-size="21" fill="#596676">Own samples</text>
+    </g>
+    <path d="M599 105H622" fill="none" stroke="#4b76b5" stroke-width="2.4" marker-end="url(#rft-arrow)"/>
+    <circle cx="654" cy="105" r="23" fill="#edf3fc" stroke="#9fb7d8" stroke-width="1.8"/>
+    <path d="M643 105L651 113L666 97" fill="none" stroke="#4b76b5" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M654 135V173Q654 180 647 180H441Q434 180 434 173V140" fill="none" stroke="#4b76b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#rft-arrow)"/>
+    <text x="540" y="206" font-size="24" fill="#1646a1">Reward correctness</text>
+
+    <path d="M34 234H686" fill="none" stroke="#e0e6ed" stroke-width="1.5"/>
+    <text x="96" y="267" text-anchor="start" font-size="24" fill="#596676">Old-task error</text>
+    <g fill="none" stroke="#9aa5b1" stroke-width="1.6" marker-end="url(#axis-arrow)">
+      <path d="M96 426V283"/>
+      <path d="M96 426H664"/>
+    </g>
+    <path d="M96 408C158 408 192 375 239 336C278 304 317 294 362 296C439 299 488 334 548 350C578 358 602 363 625 365" fill="none" stroke="#76539b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M96 408H625" fill="none" stroke="#4b76b5" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="96" cy="408" r="5" fill="#4b76b5"/>
+    <text x="644" y="373" text-anchor="start" font-size="24" font-weight="600" fill="#76539b">SFT</text>
+    <text x="644" y="416" text-anchor="start" font-size="24" font-weight="600" fill="#1646a1">RFT</text>
+    <text x="380" y="461" font-size="24" fill="#596676">Fine-tuning steps</text>
+  </g>
+</svg>

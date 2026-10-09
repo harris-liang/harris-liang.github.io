@@ -1,4 +1,8 @@
 const publications = [
+  { year: '2026', venue: 'arXiv preprint',
+    title: 'Learning Style, Forgetting Semantics: A Case Study of SFT and RFT on Classification Tasks',
+    authors: ['Haodong Liang', 'Yanhao Jin', 'Krishnakumar Balasubramanian', 'Lifeng Lai'],
+    url: 'https://arxiv.org/abs/2610.02437' },
   { year: '2026', venue: 'NeurIPS 2026',
     title: 'Transformers Provably Implement In-Context Reinforcement Learning with Policy Improvement',
     authors: ['Haodong Liang', 'Lifeng Lai'],
@@ -42,7 +46,7 @@ export default function Home() {
             <a href="#about">About</a><a href="#research">Research</a>
             <a href="#publications">Publications</a><a href="#background">Background</a>
           </nav>
-          <a className="header-cv" href="/Haodong-Liang-CV.pdf" target="_blank" rel="noopener noreferrer">CV <Arrow /></a>
+          <a className="header-cv" href="/Haodong-Liang-CV.pdf?v=20261008" target="_blank" rel="noopener noreferrer">CV <Arrow /></a>
         </div>
       </header>
       <main id="main" className="page-shell">
@@ -62,7 +66,7 @@ export default function Home() {
               <a href="mailto:hdliang@ucdavis.edu">Email <Arrow /></a>
               <a href="https://scholar.google.com/citations?user=JcLatcIAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <Arrow /></a>
               <a href="https://www.linkedin.com/in/haodong-liang-0b852121b/" target="_blank" rel="noopener noreferrer">LinkedIn <Arrow /></a>
-              <a href="/Haodong-Liang-CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+              <a href="/Haodong-Liang-CV.pdf?v=20261008" download>Download CV <span aria-hidden="true">↓</span></a>
             </div>
           </div>
           <div className="biography">
@@ -82,18 +86,30 @@ export default function Home() {
           <div className="research-grid">
             <article className="research-item">
               <h3>In-context learning</h3>
-              <ResearchIllustration src="/icl-concept-paper.svg" alt="The context contains apple → fruit and bird → animal. Given the query carrot → ?, a Transformer predicts vegetable without updating its parameters. An illustrative in-context classification task." caption="Learn from context, without parameter updates.">
+              <ResearchIllustration src="/icl-concept-paper.svg" alt="The context contains apple → fruit and bird → animal. Given the query carrot → ?, a Transformer predicts vegetable without updating its parameters. An illustrative in-context classification task." caption="Pretrained Transformers learn from context, without parameter updates.">
                 <img className="icl-spot icl-spot-apple" src="/illustrations/icl-apple.png" alt="" aria-hidden="true" width={72} height={72} loading="lazy" decoding="async" />
                 <img className="icl-spot icl-spot-bird" src="/illustrations/icl-bird.png" alt="" aria-hidden="true" width={72} height={72} loading="lazy" decoding="async" />
                 <img className="icl-spot icl-spot-carrot" src="/illustrations/icl-carrot.png" alt="" aria-hidden="true" width={72} height={72} loading="lazy" decoding="async" />
               </ResearchIllustration>
-              <p>In-context learning refers to a pretrained model’s ability to learn from contextual information and adapt to new tasks at inference time. We study the theoretical foundations of Transformers’ in-context learning ability in linear regression and reinforcement learning. For in-context linear regression, our work establishes that Transformers can address endogeneity using instrumental variables. For in-context reinforcement learning, we investigate how Transformers can act as agents and implement policy-improvement algorithms through closed-loop interaction with the environment.</p>
+              <div className="research-copy">
+                <p>In-context learning refers to a pretrained model’s ability to learn from contextual information and adapt to new tasks at inference time. We study the theoretical foundations of Transformers’ in-context learning ability in linear regression and reinforcement learning. For in-context linear regression, our work establishes that Transformers can address endogeneity using instrumental variables. For in-context reinforcement learning, we investigate how Transformers can act as agents and implement policy-improvement algorithms through closed-loop interaction with the environment.</p>
+              </div>
               <a className="text-link" href="#publications">Related publications <span aria-hidden="true">↓</span></a>
+            </article>
+            <article className="research-item">
+              <h3>Fine-tuning &amp; forgetting</h3>
+              <ResearchIllustration src="/finetuning-overview.svg?v=5" alt="A conceptual comparison of supervised and reinforcement fine-tuning. SFT fits the teacher distribution over correct demonstrations, including its style preferences. RFT generates its own samples, evaluates semantic correctness, and updates using reward feedback. The lower plot is a qualitative schematic of the paper's two-task population dynamics from a perfectly fitted, style-symmetric checkpoint: SFT old-task error rises and later declines, while RFT retains zero error throughout training. The horizontal axis denotes fine-tuning steps at a fixed step size. These curves are schematic, not measured data; the zero-error RFT behavior relies on the studied population-update conditions." caption="Style imitation can induce semantic forgetting." />
+              <div className="research-copy">
+                <p>Why can learning from correct demonstrations still cause a model to forget previously acquired capabilities? We study supervised fine-tuning (SFT) and reinforcement fine-tuning (RFT) on classification tasks where the same answer can be expressed in different styles. By separating semantic and style updates in a linear-softmax model, we show how fitting a teacher’s stylistic preferences can induce semantic forgetting. Under explicit conditions on population updates, we prove a finite-time forgetting gap between SFT and RFT, and support the analysis with sequential-task simulations.</p>
+              </div>
+              <a className="text-link" href="https://arxiv.org/abs/2610.02437" target="_blank" rel="noopener noreferrer">Read the paper <Arrow /></a>
             </article>
             <article className="research-item">
               <h3>Differential privacy</h3>
               <ResearchIllustration src="/privacy-concept-paper.svg" alt="Datasets D and D prime differ only in one highlighted record, labeled a and b. Both are processed separately by the same randomized algorithm M. Solid and dashed curves illustrate nearby output distributions under a privacy guarantee, not experimental results." caption="Changing one record has a limited effect on the output distribution." />
-              <p>Differential privacy provides formal guarantees that limit how much an individual’s data can influence an algorithm’s output. We address endogeneity under privacy constraints by developing a noisy two-stage gradient descent algorithm with zero-concentrated differential privacy guarantees and finite-sample convergence rates.</p>
+              <div className="research-copy">
+                <p>Differential privacy provides formal guarantees that limit how much an individual’s data can influence an algorithm’s output. We address endogeneity under privacy constraints by developing a noisy two-stage gradient descent algorithm with zero-concentrated differential privacy guarantees and finite-sample convergence rates.</p>
+              </div>
               <a className="text-link" href="https://arxiv.org/abs/2509.22794" target="_blank" rel="noopener noreferrer">Read the paper <Arrow /></a>
             </article>
           </div>
@@ -123,7 +139,12 @@ export default function Home() {
               <h3 className="small-heading">Education</h3>
               <div className="education-item"><p className="date-label">2023–2028 (expected)</p><h4>University of California, Davis</h4><p>Ph.D., Electrical &amp; Computer Engineering</p></div>
               <div className="education-item"><p className="date-label">2021–2023</p><h4>University of Michigan, Ann Arbor</h4><p>M.Sc., Statistics</p></div>
-              <div className="education-item"><p className="date-label">2016–2020</p><h4>Xiamen University</h4><p>B.Sc., Mathematical Statistics</p></div>
+              <div className="education-item">
+                <p className="date-label">2016–2020</p>
+                <h4>Xiamen University</h4>
+                <p>B.Sc., Mathematical Statistics</p>
+                <p className="education-note">In the Chinese Gaokao, I was ranked 67th/~170,000 in Fujian Province (top 0.04%, science track).</p>
+              </div>
             </div>
             <div>
               <h3 className="small-heading">Academic service</h3>
