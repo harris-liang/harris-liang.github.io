@@ -66,6 +66,7 @@ export default function Home() {
               <a href="mailto:hdliang@ucdavis.edu">Email <Arrow /></a>
               <a href="https://scholar.google.com/citations?user=JcLatcIAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <Arrow /></a>
               <a href="https://www.linkedin.com/in/haodong-liang-0b852121b/" target="_blank" rel="noopener noreferrer">LinkedIn <Arrow /></a>
+              <a href="https://github.com/harris-liang" target="_blank" rel="noopener noreferrer">GitHub <Arrow /></a>
               <a href="/Haodong-Liang-CV.pdf?v=20261008" download>Download CV <span aria-hidden="true">↓</span></a>
             </div>
           </div>
