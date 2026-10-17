@@ -144,7 +144,6 @@ export default function Home() {
                 <p className="date-label">2016–2020</p>
                 <h4>Xiamen University</h4>
                 <p>B.Sc., Mathematical Statistics</p>
-                <p className="education-note">In the Chinese Gaokao, I was ranked 67th/~170,000 in Fujian Province (top 0.04%, science track).</p>
               </div>
             </div>
             <div>
