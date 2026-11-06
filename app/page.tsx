@@ -46,7 +46,7 @@ export default function Home() {
             <a href="#about">About</a><a href="#research">Research</a>
             <a href="#publications">Publications</a><a href="#background">Background</a>
           </nav>
-          <a className="header-cv" href="/Haodong-Liang-CV.pdf?v=20261011" target="_blank" rel="noopener noreferrer">CV <Arrow /></a>
+          <a className="header-cv" href="/Haodong-Liang-CV.pdf?v=20261106" target="_blank" rel="noopener noreferrer">CV <Arrow /></a>
         </div>
       </header>
       <main id="main" className="page-shell">
@@ -67,14 +67,14 @@ export default function Home() {
               <a href="https://scholar.google.com/citations?user=JcLatcIAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <Arrow /></a>
               <a href="https://www.linkedin.com/in/haodong-liang-0b852121b/" target="_blank" rel="noopener noreferrer">LinkedIn <Arrow /></a>
               <a href="https://github.com/harris-liang" target="_blank" rel="noopener noreferrer">GitHub <Arrow /></a>
-              <a href="/Haodong-Liang-CV.pdf?v=20261011" download>Download CV <span aria-hidden="true">↓</span></a>
+              <a href="/Haodong-Liang-CV.pdf?v=20261106" download>Download CV <span aria-hidden="true">↓</span></a>
             </div>
           </div>
           <div className="biography">
             <h2 className="about-heading">About me</h2>
             <p className="bio-lead">Welcome to my homepage! I am a Ph.D. candidate at UC Davis, advised by Professors <a className="person-name" href="https://faculty.engineering.ucdavis.edu/lai/" target="_blank" rel="noopener noreferrer">Lifeng Lai</a> and <a className="person-name" href="https://sites.google.com/view/kriznakumar/home" target="_blank" rel="noopener noreferrer">Krishnakumar Balasubramanian</a>.</p>
-            <p>I study the theoretical and mechanistic foundations of in-context learning. My research combines theoretical analysis with empirical investigation to understand how Transformers learn and execute algorithms in context.</p>
-            <p>I am also interested in reinforcement learning, continual learning, and differential privacy.</p>
+            <p>I am interested in how large language models (LLMs) develop the ability to solve new tasks through in-context learning: at inference time, an LLM agent can learn from context to discover patterns, make predictions, or use feedback to guide its next decision—all without updating its parameters. To understand how these capabilities arise, I study which machine learning algorithms can be encoded in the Transformer model (the building-block of LLM), and under what conditions training enables Transformer models to develop this ability.</p>
+            <p>More broadly, I am excited about developing reliable LLM agents, from pre-training to fine-tuning.</p>
           </div>
         </section>
         <aside className="opportunity" aria-label="Work interests">
